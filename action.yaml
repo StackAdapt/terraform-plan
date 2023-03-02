@@ -68,8 +68,9 @@ outputs:
 
 runs:
   using: docker
-  image: docker://danielflook/terraform-github-actions@sha256:405665d9e9f4ff47eb61152008b3dbb25c00a831deb859ea19c46d28672afb55
+  image: docker://130726505375.dkr.ecr.us-east-1.amazonaws.com/terraform-actions:1.32.0
   entrypoint: /entrypoints/plan.sh
+
 
 branding:
   icon: globe
