@@ -67,9 +67,11 @@ outputs:
     description: If the root module uses the `remote` or `cloud` backend in remote execution mode, this output will be set to the remote run id.
 
 runs:
-  using: docker
-  image: docker://130726505375.dkr.ecr.us-east-1.amazonaws.com/terraform-actions:latest
-  entrypoint: /entrypoints/plan.sh
+  container:
+        image: 130726505375.dkr.ecr.us-east-1.amazonaws.com/terraform-actions:latest
+  steps:
+      - run: /entrypoints/apply.sh
+
 
 branding:
   icon: globe
