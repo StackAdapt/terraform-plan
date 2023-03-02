@@ -69,7 +69,7 @@ outputs:
 runs:
   using: docker
   image: docker://130726505375.dkr.ecr.us-east-1.amazonaws.com/terraform-actions:latest
-  entrypoint: /entrypoints/apply.sh
+  entrypoint: /entrypoints/plan.sh
 
 
 branding:
