@@ -1,14 +1,14 @@
 name: terraform-plan
-description: Create a terraform plan
+description: Create a Terraform plan
 author: Daniel Flook
 
 inputs:
   path:
-    description: Path to the terraform configuration
+    description: Path to the Terraform configuration
     required: false
     default: .
   workspace:
-    description: Name of the terraform workspace
+    description: Name of the Terraform workspace
     required: false
     default: default
   backend_config:
@@ -41,6 +41,10 @@ inputs:
     description: List of resources to replace if an update is required, one per line
     required: false
     default: ""
+  destroy:
+    description: Create a plan to destroy all resources
+    required: false
+    default: "false"
   label:
     description: A friendly name for this plan
     required: false
@@ -59,6 +63,8 @@ outputs:
     description: The number of resources that would be changed by this plan
   to_destroy:
     description: The number of resources that would be destroyed by this plan
+  plan_path:
+    description: Path to a file in the workspace containing the generated plan in an opaque binary format.
   text_plan_path:
     description: Path to a file in the workspace containing the generated plan in human readable format.
   json_plan_path:
