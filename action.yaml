@@ -68,7 +68,7 @@ outputs:
 
 runs:
   using: docker
-  image: docker://130726505375.dkr.ecr.us-east-1.amazonaws.com/terraform-actions:1.32.0
+  image: docker://130726505375.dkr.ecr.us-east-1.amazonaws.com/terraform-actions:1.42.0
   entrypoint: /entrypoints/plan.sh
 
 
